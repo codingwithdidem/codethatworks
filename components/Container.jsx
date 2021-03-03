@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Container = ({ children }) => {
   return (
@@ -15,19 +16,16 @@ const Container = ({ children }) => {
           <Link href="/">
             <a className="p-1 sm:p-4  text-gray-900">Dashboard</a>
           </Link>
-          <Link href="/">
+          <Link href="/blog">
             <a className="p-1 sm:p-4 text-gray-900">Blog</a>
           </Link>
-          <Link href="/">
+          <Link href="/about">
             <a className="p-1 sm:p-4 text-gray-900">About</a>
           </Link>
         </div>
       </nav>
 
-      <main className="mt-16">
-        {/* Main Content */}
-        {children}
-      </main>
+      <main className="m-16 ">{children}</main>
     </div>
   );
 };
