@@ -6,12 +6,12 @@ import Container from '@/components/Container';
 export default function Dashboard() {
   return (
     <Container>
-      <div className="flex flex-row justify-between max-w-5xl mx-auto">
+      <div className="flex flex-row justify-between max-w-3xl mx-auto">
         <div className="flex flex-col items-start justify-center ">
-          <h1 className="font-bold text-4xl md:text-5xl mb-2 tracking-tight text-purple-800">
+          <h1 className="font-bold text-3xl md:text-4xl mb-2 tracking-tight text-purple-800">
             Hey there, I'm Didem -
           </h1>
-          <p className="font-thin text-3xl md:text-4xl tracking-tight text-purple-800 mb-10">
+          <p className="font-thin text-2xl md:text-3xl tracking-tight text-purple-800 mb-10">
             React Developer & Youtuber
           </p>
 
@@ -28,7 +28,7 @@ export default function Dashboard() {
           className="flex-none"
           src="/blob.svg"
           alt="Blob"
-          width={400}
+          width={300}
           height={350}
         />
       </div>

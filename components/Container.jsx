@@ -10,7 +10,7 @@ const Container = ({ children }) => {
         <title>Code That Works</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className="flex flex-row justify-between items-center mx-auto max-w-5xl w-full ">
+      <nav className="flex flex-row justify-between items-center mx-auto max-w-3xl w-full ">
         <div>Dark Mode</div>
         <div className="flex flex-row items-center">
           <Link href="/">
