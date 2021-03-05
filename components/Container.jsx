@@ -7,7 +7,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 const Container = ({ children }) => {
   return (
-    <div className=" min-h-screen bg-white dark:bg-black p-8">
+    <div className=" min-h-screen bg-white dark:bg-dark p-8">
       <Head>
         <title>Code That Works</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,18 +16,20 @@ const Container = ({ children }) => {
         <ThemeSwitcher />
         <div className="flex flex-row items-center">
           <Link href="/">
-            <a className="p-1 sm:p-4  text-gray-900">Dashboard</a>
+            <a className="p-1 sm:p-4  text-gray-900 dark:text-white">
+              Dashboard
+            </a>
           </Link>
           <Link href="/blog">
-            <a className="p-1 sm:p-4 text-gray-900">Blog</a>
+            <a className="p-1 sm:p-4 text-gray-900 dark:text-white">Blog</a>
           </Link>
           <Link href="/about">
-            <a className="p-1 sm:p-4 text-gray-900">About</a>
+            <a className="p-1 sm:p-4 text-gray-900 dark:text-white">About</a>
           </Link>
         </div>
       </nav>
 
-      <main className="bg-white dark:bg-black p-16">{children}</main>
+      <main className="bg-white dark:bg-dark p-16">{children}</main>
     </div>
   );
 };
