@@ -4,10 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import ThemeSwitcher from '@/components/ThemeSwitcher';
-
 const Container = ({ children }) => {
   return (
-    <div className=" min-h-screen bg-white dark:bg-dark p-8">
+    <div className="min-h-screen bg-white dark:bg-dark p-8 ">
       <Head>
         <title>Code That Works</title>
         <link rel="icon" href="/favicon.ico" />
