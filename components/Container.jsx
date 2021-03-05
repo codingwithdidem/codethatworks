@@ -3,15 +3,17 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import ThemeSwitcher from '@/components/ThemeSwitcher';
+
 const Container = ({ children }) => {
   return (
-    <div className="bg-white p-8">
+    <div className=" min-h-screen bg-white dark:bg-black p-8">
       <Head>
         <title>Code That Works</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className="flex flex-row justify-between items-center mx-auto max-w-3xl w-full ">
-        <div>Dark Mode</div>
+        <ThemeSwitcher />
         <div className="flex flex-row items-center">
           <Link href="/">
             <a className="p-1 sm:p-4  text-gray-900">Dashboard</a>
@@ -25,7 +27,7 @@ const Container = ({ children }) => {
         </div>
       </nav>
 
-      <main className="m-16 ">{children}</main>
+      <main className="bg-white dark:bg-black p-16">{children}</main>
     </div>
   );
 };
