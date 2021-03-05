@@ -14,8 +14,14 @@ export default function Dashboard() {
   useEffect(() => setMounted(true), []);
 
   const code = `const instagram = 'https://www.instagram.com/didemk95/'; 
-const youtube = 'https://studio.youtube.com/channel/UCfGXEo2uCkVqcIqkIaFNGcA'
-<a href="https://www.google.com" /> `;
+const youtube = 'https://www.youtube.com/channel/UCfGXEo2uCkVqcIqkIaFNGcA'
+const twitter = 'https://twitter.com/DidemKkkaraasl1'
+const github = 'https://github.com/didemkaraaslan'
+
+
+const todo = 'Follow me 🐱 , Eat some 🍪 🍪 , drink lots of ☕️☕️'
+`;
+
   return (
     <Container>
       <div className="max-w-3xl mx-auto">
@@ -51,9 +57,9 @@ const youtube = 'https://studio.youtube.com/channel/UCfGXEo2uCkVqcIqkIaFNGcA'
           <CodeBlock
             text={code}
             language={'javascript'}
-            showLineNumbers
+            showLineNumbers={true}
             wrapLines
-            highlight="1,2,3"
+            highlight="1,2,3,4,7"
             theme={theme === 'dark' ? atomOneDark : tomorrowNightBlue}
           />
         )}
