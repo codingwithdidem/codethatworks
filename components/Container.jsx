@@ -22,8 +22,8 @@ const Container = ({ children }) => {
           <Link href="/blog">
             <a className="p-1 sm:p-4 text-gray-900 dark:text-white">Blog</a>
           </Link>
-          <Link href="/about">
-            <a className="p-1 sm:p-4 text-gray-900 dark:text-white">About</a>
+          <Link href="/courses">
+            <a className="p-1 sm:p-4 text-gray-900 dark:text-white">Courses</a>
           </Link>
         </div>
       </nav>

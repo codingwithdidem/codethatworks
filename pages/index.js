@@ -59,7 +59,7 @@ const todo = 'Follow me 🐱 , Eat some 🍪 🍪 , drink lots of ☕️☕️'
             language={'javascript'}
             showLineNumbers={true}
             wrapLines
-            highlight="1,2,3,4,7"
+            highlight="1,2,3,4,5,7"
             theme={theme === 'dark' ? atomOneDark : tomorrowNightBlue}
           />
         )}
