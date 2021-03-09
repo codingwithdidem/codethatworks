@@ -9,7 +9,8 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider attribute="class">
       <MDXProvider
         components={{
-          h1: Heading
+          pre: (props) => <div {...props} />,
+          code: (props) => <pre style={{ color: 'tomato' }} {...props} />
         }}
       >
         <Component {...pageProps} />
