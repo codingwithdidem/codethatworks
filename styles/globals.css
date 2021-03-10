@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-display: optional;
+  src: url(/fonts/SourceSansPro-Regular.ttf) format('ttf');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,19 +17,11 @@ html {
   background-color: blueviolet;
   color: #fefefe;
 }
+
 #__next {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.pinkBlob {
-  z-index: -10;
-  width: 20rem;
-  height: 22rem;
-  position: 'absolute';
-  left: 0;
-  top: 0;
 }
 
 .prose pre {

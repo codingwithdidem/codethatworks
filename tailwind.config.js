@@ -15,7 +15,7 @@ module.exports = {
         dark: '#151618'
       },
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans]
+        sans: ['"Source Sans Pro"', ...fontFamily.sans]
       },
       typography: (theme) => ({
         DEFAULT: {
