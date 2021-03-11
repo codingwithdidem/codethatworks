@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { MdStar } from 'react-icons/md';
 
 const CourseCard = ({
   id,
@@ -33,8 +34,10 @@ const CourseCard = ({
             <h5 className=" text-gray-500 mb-2">{headline}</h5>
             <p className="text-gray-800 mt-2">{`${BASE_URL}${url}`}</p>
             <div className="flex mt-5">
-              <p className="">
-                {num_reviews} Reviews | {rating} **
+              <p className="mr-3">{num_reviews} Reviews</p>
+              <p className="flex items-center ml-3">
+                <MdStar className="mr-2" />
+                {rating?.toFixed(2)}
               </p>
             </div>
           </div>
