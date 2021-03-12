@@ -13,7 +13,7 @@ const ThemeSwitcher = () => {
     <>
       {mounted && (
         <div
-          class="w-16 h-18 bg-purple-500 rounded-full p-1 border border-purple-400 cursor-pointer relative"
+          className="w-16 h-18 bg-purple-500 rounded-full p-1 border border-purple-400 cursor-pointer relative"
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
           <div className="flex justify-between items-center">

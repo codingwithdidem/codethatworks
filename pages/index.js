@@ -25,31 +25,28 @@ const todo = 'Follow me 🐱 , Eat some 🍪 🍪 , drink lots of ☕️☕️'
   return (
     <Container>
       <div className="max-w-3xl mx-auto">
-        <div className="flex flex-row justify-between mb-16 ">
+        <div className="max-w-xl mx-auto md:max-w-3xl md:flex md:justify-between mb-16 ">
           <div className="flex flex-col items-start justify-center ">
-            <h1 className="font-bold text-3xl md:text-4xl mb-2 tracking-tight text-purple-800 dark:text-white">
-              Hey there, I'm Didem -
+            <h1 className="font-bold text-2xl md:text-4xl mb-2 tracking-tight text-purple-800 dark:text-white">
+              Hey there, I'm Didem 
             </h1>
-            <p className="font-thin text-2xl md:text-3xl tracking-tight text-purple-800 dark:text-white mb-10">
+            <p className="font-thin text-xl md:text-3xl tracking-tight text-purple-800 dark:text-white mb-10">
               React Developer & Youtuber
             </p>
 
             <p className="text-xl text-gray-800 dark:text-white ">
               You have no idea what I'll be posting here.
-              <span className="italic font-medium ml-1"> So do I.</span>
-            </p>
-            <p className="text-xl text-gray-800 dark:text-white">
+              <span className="italic font-medium ml-1"> So do I. </span>
               Anyway, It's nice to have you here! :)
             </p>
           </div>
-
+          <div className="md:h-64 md:w-96 relative invisible md:visible flex-none">
           <Image
-            className="flex-none"
             src="/blob.svg"
             alt="Blob"
-            width={300}
-            height={350}
+            layout="fill"
           />
+          </div>
         </div>
         {/* Code Block */}
 

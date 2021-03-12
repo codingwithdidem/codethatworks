@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         main: '#8739F9',
         secondary: '#C651CD',
-        dark: '#272727'
+        dark: '#121212'
       },
       fontFamily: {
         sans: ['"Source Sans Pro"', ...fontFamily.sans]

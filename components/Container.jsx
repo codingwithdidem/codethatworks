@@ -6,7 +6,7 @@ import Image from 'next/image';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
 const Container = ({ children }) => {
   return (
-    <div className="min-h-screen bg-white dark:bg-dark p-8 ">
+    <div className="min-h-screen bg-white dark:bg-dark p-4 lg:p-8 ">
       <Head>
         <title>Code That Works</title>
         <link rel="icon" href="/favicon.ico" />
@@ -15,20 +15,20 @@ const Container = ({ children }) => {
         <ThemeSwitcher />
         <div className="flex flex-row items-center">
           <Link href="/">
-            <a className="p-1 sm:p-4  text-gray-900 dark:text-white">
+            <a className="p-1 md:p-4  text-gray-900 dark:text-white">
               Dashboard
             </a>
           </Link>
           <Link href="/blog">
-            <a className="p-1 sm:p-4 text-gray-900 dark:text-white">Blog</a>
+            <a className="p-1 md:p-4 text-gray-900 dark:text-white">Blog</a>
           </Link>
           <Link href="/courses">
-            <a className="p-1 sm:p-4 text-gray-900 dark:text-white">Courses</a>
+            <a className="p-1 md:p-4 text-gray-900 dark:text-white">Courses</a>
           </Link>
         </div>
       </nav>
 
-      <main className="bg-white dark:bg-dark p-16">{children}</main>
+      <main className="bg-white dark:bg-dark p-2 lg:p-8 mt-16">{children}</main>
     </div>
   );
 };
