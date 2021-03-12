@@ -1,9 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import ThemeSwitcher from '@/components/ThemeSwitcher';
+
 const Container = ({ children }) => {
   return (
     <div className="min-h-screen bg-white dark:bg-dark p-4 lg:p-8 ">

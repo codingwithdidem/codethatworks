@@ -11,7 +11,7 @@ const BlogPost = ({ post }) => {
         </h1>
         <p className="text-gray-800 dark:text-gray-400 mb-2">{post?.spoiler}</p>
         <small className="text-gray-500 text-sm">
-          {getFormattedDate(post?.date)} • ☕️ 5 min read
+          {getFormattedDate(post?.date)} • ☕️ {post?.readingTime?.text}
         </small>
       </article>
     </Link>

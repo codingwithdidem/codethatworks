@@ -19,7 +19,6 @@ export default function Courses({ courses }) {
 export async function getStaticProps() {
   const courses = await getAllCourses();
 
-  console.log(courses);
   return {
     props: {
       courses
