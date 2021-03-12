@@ -2,17 +2,12 @@ import '@/styles/globals.css';
 import { MDXProvider } from '@mdx-js/react';
 import { ThemeProvider } from 'next-themes';
 
-import Heading from '@/components/Heading';
+import MDXComponents from '@/components/MDXComponents';
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
-      <MDXProvider
-        components={{
-          pre: (props) => <div {...props} />,
-          code: (props) => <pre style={{ color: 'tomato' }} {...props} />
-        }}
-      >
+      <MDXProvider components={MDXComponents}>
         <Component {...pageProps} />
       </MDXProvider>
     </ThemeProvider>

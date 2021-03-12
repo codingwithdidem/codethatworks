@@ -1,7 +1,61 @@
 ---
-title: 'Welcome Post'
-date: '2021-03-04'
-spoiler: 'A deepdive on everything I have learned in the past year building style guides, design systems, component libraries, and their best practices.'
+title: 'I builded a NextJS Blog'
+date: '2021-03-12'
+spoiler: 'Hello there! This is the very first blog on this site.'
 ---
 
-# Welcome.
+# Welcome
+
+Hello there! This is the very first blog on this site.
+It took me **so long** to build this lovely blog. So don't go now.
+First of all let me tell you about the tech stack I used:
+
+- Next.js (Upgraded to `v10`)
+- `next-mdx-remote` (`next-mdx-enhanced` is fucking heavy.)
+- Tailwind CSS ( I still can't center a div though :) )
+
+I was constantly looking at Leerob's work [Leerob Repo](https://github.com/leerob/leerob.io)
+to build this blog. And thats my work: [My Work](https://github.com/codingwithdidem/codethatworks)
+
+## What I will do with this blog?
+
+> Sharing what you learn is a good idea
+
+At least someone should have told us.
+
+## Let's see how code looks like
+
+```jsx
+<div className="bg-gray-900 rounded" /> // Awesome!
+```
+
+## This blog is using MDX.
+
+That means we can use _components_ here!
+Maybe a `<Button/>`?
+
+<Button>Love is a bitch</Button>
+
+This is the actual code:
+
+```jsx
+// /components/Button.jsx
+
+import React from 'react';
+
+const Button = ({ children }) => {
+  return (
+    <button className="bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">
+      {children}
+    </button>
+  );
+};
+
+export default Button;
+```
+
+```jsx
+// data/blog/hello.mdx
+
+<Button>Love is a bitch</Button>
+```
