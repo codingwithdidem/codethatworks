@@ -1,3 +1,4 @@
+const mdx = require('@mdx-js/mdx');
 const { spacing, colors, fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
