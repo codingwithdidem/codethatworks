@@ -1,4 +1,4 @@
-const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
+const { spacing, colors, fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   purge: [
@@ -16,6 +16,21 @@ module.exports = {
       },
       fontFamily: {
         sans: ['"Source Sans Pro"', ...fontFamily.sans]
+      },
+      animation: {
+        wiggle: 'wiggle 1s infinite'
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': {
+            transform: 'scale(1.2) rotate(7deg)',
+            background: colors.red[500]
+          },
+          '50%': {
+            transform: 'scale(0.8) rotate(-7deg)',
+            background: colors.purple[500]
+          }
+        }
       },
       typography: (theme) => ({
         DEFAULT: {

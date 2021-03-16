@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Button = ({ children }) => {
+const Button = ({ type, onClick, classes, children }) => {
   return (
-    <button className="bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">
+    <button onClick={onClick} className={classes}>
       {children}
     </button>
   );

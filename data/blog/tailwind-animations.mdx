@@ -1,0 +1,162 @@
+---
+title: 'Animations With Tailwindcss'
+date: '2021-03-16'
+spoiler: 'For your app to shine, you need to consider adding animations.'
+---
+
+# Why use Animations?
+
+Building apps are easy. There are tons of **ordinary** applications on the Internet.
+And you, **as a developer**, can easily create one of them. But as I might guess, this is not what you want.
+You want to make a good impression, _huh_?
+
+Well, for your app to shine, you need to consider adding **animations**.
+
+# Built-in Tailwind Animations
+
+So you have built your app using _tailwindcss_ and it is already pretty good-looking.
+Now its time to add some spice on top of it.
+
+Out of box, tailwind comes with a series of suggested animations you can apply on any elements in your markup.
+
+```css
+    animation: {
+      none: 'none',
+      spin: 'spin 1s linear infinite',
+      ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
+      pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      bounce: 'bounce 1s infinite',
+    },
+    keyframes: {
+     spin: {
+       to: {
+         transform: 'rotate(360deg)',
+       },
+     },
+     ping: {
+       '75%, 100%': {
+         transform: 'scale(2)',
+         opacity: '0',
+       },
+     },
+     pulse: {
+       '50%': {
+         opacity: '.5',
+       },
+     },
+     bounce: {
+       '0%, 100%': {
+         transform: 'translateY(-25%)',
+         animationTimingFunction: 'cubic-bezier(0.8,0,1,1)',
+       },
+       '50%': {
+         transform: 'none',
+         animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+       },
+     },
+   },
+
+```
+
+You can use `animate-none` `animate-spin` `animate-ping` `animate-pulse` `animate-bounce` utility classes to use them.
+
+## Lets try `animate-bounce` animation.
+
+<Button classes="animate-bounce bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">
+  I cant stop bouncing :)
+</Button>
+
+```jsx
+<button class="animate-bounce bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">
+  I cant stop bouncing :)
+</button>
+```
+
+Now this line of code `bounce: 'bounce 1s infinite'` makes our button bounce every 1s infinetely.
+If we want, we can override it in `tailwind.config.js`.
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        bounce: 'bounce 0.2s infinite'
+      }
+    }
+};
+
+```
+
+## Lets try `animate-ping`
+
+<div className="flex items-center">
+  <div className="relative">
+    <div className="w-16 h-16 bg-white rounded-lg shadow-2xl"></div>
+    <div className="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-green-300 animate-ping"></div>
+    <div className="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-green-300"></div>
+  </div>
+</div>
+
+```jsx
+<div class="flex items-center">
+  <div class="relative">
+    <div class="w-16 h-16 bg-white rounded-lg shadow-2xl"></div>
+    <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-green-300 animate-ping"></div>
+    <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-green-300"></div>
+  </div>
+</div>
+```
+
+## We can also create our own animations
+
+<div class="p-10 flex items-center">
+  <div class="animate-wiggle">
+    <div class="w-32 h-32 rounded-lg"></div>
+  </div>
+</div>
+
+```jsx
+<div class="p-10 flex items-center">
+  <div class="animate-wiggle">
+    <div class="w-32 h-32 rounded-lg"></div>
+  </div>
+</div>
+```
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        wiggle: 'wiggle 1s infinite'
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': {
+            transform: 'scale(1.2) rotate(7deg)',
+             background: colors.red[500]
+          },
+          '50%': {
+            transform: 'scale(0.8) rotate(-7deg)',
+            background: colors.purple[500]
+          },
+        }
+      }
+    }
+};
+
+```
+
+## Finally, Its responsive ! Horaaay 🎉
+
+<Button classes="md:animate-bounce bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">
+  I stop bouncing on mobile
+</Button>
+
+```jsx
+<button class="md:animate-bounce bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">
+  I stop bouncing on mobile
+</button>
+```
