@@ -62,7 +62,11 @@ You can use `animate-none` `animate-spin` `animate-ping` `animate-pulse` `animat
 
 ## Lets try `animate-bounce` animation.
 
-<Button classes="animate-bounce bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">
+<Button
+  classes={
+    'animate-bounce bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded'
+  }
+>
   I cant stop bouncing :)
 </Button>
 
@@ -92,7 +96,7 @@ module.exports = {
 
 <div className="flex items-center">
   <div className="relative">
-    <div className="w-16 h-16 bg-white rounded-lg shadow-2xl"></div>
+    <div className="w-16 h-16 bg-gray-400 rounded-lg shadow-2xl"></div>
     <div className="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-green-300 animate-ping"></div>
     <div className="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-green-300"></div>
   </div>
@@ -101,7 +105,7 @@ module.exports = {
 ```jsx
 <div class="flex items-center">
   <div class="relative">
-    <div class="w-16 h-16 bg-white rounded-lg shadow-2xl"></div>
+    <div class="w-16 h-16 bg-gray-400 rounded-lg shadow-2xl"></div>
     <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-green-300 animate-ping"></div>
     <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-green-300"></div>
   </div>
@@ -151,7 +155,11 @@ module.exports = {
 
 ## Finally, Its responsive ! Horaaay 🎉
 
-<Button classes="md:animate-bounce bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">
+<Button
+  classes={
+    'md:animate-bounce bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded'
+  }
+>
   I stop bouncing on mobile
 </Button>
 

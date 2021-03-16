@@ -5,7 +5,6 @@ export default function BlogLayout({ children, frontMatter }) {
   return (
     <Container>
       <article className="prose dark:prose-dark w-full max-w-3xl mx-auto w-full">
-        <button className="animate-bounce">hello</button>
         {children}
       </article>
     </Container>
